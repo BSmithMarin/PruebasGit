@@ -25,11 +25,46 @@ class Vehiculos():
         print("Marca: ",self.marca," Modelo: ",self.modelo,"\n en marcha: ",self.enMarcha,
          "Acelera: ",self.acelera," frena: ",self.frena)
 
+class Furgoneta(Vehiculos):
+
+    def carga(self, carga):
+        self.cargado=carga
+        if(self.cargado):
+            return "La furgoneta esta cargada"
+        else:
+            return "La furgoneta NO esta cargada"
+
 class Moto(Vehiculos): #se pasa por parametro la clase de que hereda
-    pass
+    
+    hcaballito=""
+    
+    def caballito(self):
+        self.hcaballito="Hago un caballito"
+
+    def estado(self): #Sobreescribimos el valor de la funcion estado de la clase padre
+                      #
+
+        print("Marca: ",self.marca," Modelo: ",self.modelo,"\n en marcha: ",self.enMarcha,
+         "Acelera: ",self.acelera," frena: ",self.frena, "\nHaciendo caballito: ",self.hcaballito)
+
 
 miMoto=Moto("Honda","CRX")
 
+miMoto.caballito()
+
 miMoto.estado()
+
+print("----------------Aqui empeiza la clase furgoneta-----------")
+
+miFurgoneta=Furgoneta("Renault","Kangoo")
+
+miFurgoneta.arrancar()
+
+miFurgoneta.estado()
+
+print(miFurgoneta.carga(False))
+
+
+
 
 
