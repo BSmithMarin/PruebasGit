@@ -47,6 +47,14 @@ class Moto(Vehiculos): #se pasa por parametro la clase de que hereda
         print("Marca: ",self.marca," Modelo: ",self.modelo,"\n en marcha: ",self.enMarcha,
          "Acelera: ",self.acelera," frena: ",self.frena, "\nHaciendo caballito: ",self.hcaballito)
 
+class VElectricos():
+
+    def __init__(self):
+        self.autonomia=100
+    
+    def cargaEnergia(self):
+
+        self.cargando=True
 
 miMoto=Moto("Honda","CRX")
 
@@ -65,6 +73,7 @@ miFurgoneta.estado()
 print(miFurgoneta.carga(False))
 
 
+class BicicletaElectrica(Vehiculos,VElectricos): #Se hereda el constructor de la primera clase padre
+    pass
 
-
-
+miBiciE=BicicletaElectrica("BMX","Eedition")
