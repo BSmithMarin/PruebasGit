@@ -41,3 +41,18 @@ archivo_texto=open("archivo.txt","a") #Append
 archivo_texto.write("\n siempre es una buena ocasion para apremder Python")
 
 archivo_texto.close()
+
+#-------MAnejo de punteros en archivos de texto--------
+'''
+Cunado abrimos un archivo de texto el PUNTERO se situa por defecto en la posicion 0
+al acabar de leer un archivo se queda situado en el ultimo caracter leido
+cuando abrimos un documento con APPEND como parametro tambien se situa en el ultimo carácter 
+del archivo, para poder añador contenido al archivo
+'''
+
+
+archivo_texto=open("archivo.txt","r")
+
+print()
+
+archivo_texto.close()
